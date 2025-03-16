@@ -1,0 +1,1205 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+
+                                                      /* 首頁主幹 */
+body {
+  font-family: 'Arial, Chocolate Classical Sans', sans-serif;
+  font-size: 14pt;
+  background-color: black;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.badge.text-bg-back{
+  font-size: 40%;
+  background-color: black !important;
+  color: white !important;
+}
+.badge.text-bg-info{
+  font-size: 40%;
+  color: white !important;
+}
+
+.color_red{
+  color: red;
+}
+
+.table-responsive-md table td{
+  text-align: center;
+}
+
+.table-responsive-md table tfoot td{
+  text-align: center;
+}
+
+.table-responsive-md table tr:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.color_c50000{
+  color: #c50000;
+}
+
+.web_bgc{
+  /* 購物車顏色 */
+  background-color: #f7f7f7;
+}
+
+
+.table-hover tbody tr:hover {
+  /* 只讓 tbody 的 tr 有 hover 效果 */
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+.table-hover tfoot tr:hover {
+  /* 取消 tfoot 的 hover 效果 */
+  background-color: transparent !important;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* -------------------------------------首頁設計------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+                                                      /* 首頁第一層-影片區 */
+
+#video-background,.video-background iframe{
+    min-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+#video_logo {                /* 影片logo區域 */
+  position: absolute;  /* 使用絕對定位 */
+  top: 2%;
+  left:8%;
+  width: 15%;        /* 可以根據需要調整圖片大小 */
+  height: auto;        /* 保持圖片比例 */
+  border-radius: 20px;
+  z-index: 1;          /* 確保圖片位於影片前方 */
+}
+.video_helmet {             /* 影片安全帽連結區域 */
+  position: absolute;
+  top: 55%;
+  left: 2%;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+.video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+  width: 25%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.video_suit {                 /* 影片防摔衣連結區域 */
+  position: absolute;
+  top: 70%;
+  left: 2%;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+.video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+  width: 25%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+.video_hand {                  /* 影片防摔手套連結區域 */
+  position: absolute;
+  top: 85%;
+  left: 2%;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  z-index: 1;
+  transition: all 0.2s ease;
+  background-image: url('./images/jacket.png');
+}
+.video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+  width: 25%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+/* --------------------------------------------------------------------------------- */
+                                                      /* 首頁第二層-宣傳輪播區 */
+/* #content{
+  使用move.js處理
+} */
+
+
+.showimg{               /* 首頁宣傳圖片展示 */
+  height: 100vh;
+  object-fit: contain;
+  z-index: 1;
+}
+/* --------------------------------------------------------------------------------- */
+                                                      /* 首頁第三層-關於我們 */
+.aboutme{
+  background: linear-gradient(to bottom, #000 50%, #c50000 100%);
+  /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+  color: white;
+  padding: 30px 0;
+  height: 80vh;
+}
+.about_me_logo{
+  border-radius: 20px;
+}
+.about_me_img_a:hover{
+  color: #c50000;
+}
+
+.aboutme_text{
+  text-align: left;
+  margin-left: 2%;
+}
+.movetop5{
+  margin-top: 5%;
+}
+/* --------------------------------------------------------------------------------- */
+                                                      /* 首頁第三層底-版本宣告與聲明 */
+.last-data {
+  height: 20vh;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* --------------------------------------------------------------------------------- */
+/* 右側區域切換按鈕 */
+#side-nav {
+  position: fixed;               /* 固定在螢幕上 */
+  right: 0%;
+  top: 98%;
+  width: 70%;
+  height: 6%;
+  background-color: #1f1f1f;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  border-radius: 50px 0 0 0;
+  display: flex;                          /* 使用 flexbox 排列 */
+  flex-direction: row;                 /* 讓按鈕橫式排列 */
+}
+
+.side-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;                   /* 按鈕間距 */
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  width: 100%;                          /* 確保按鈕寬度為容器的 100% */
+}
+
+.side-btn:hover {
+  color: #c50000;
+  font-size: 1.5rem;
+}
+
+.side-btn.active {
+  color: #c50000;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+#section1-btn,#section2-btn,#section3-btn{
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* ------------------------------------產品頁設計------------------------------------ */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+                                                      /* 產品區第一層*/
+/* 上方選單 */
+.navbar_bgc{
+  background: linear-gradient(to bottom, #c50000 70%, #000 100%);
+  height: 15vh;
+  position: relative;
+  z-index: 1000;
+}
+
+/* 確保下拉選單也在最上層 */
+.navbar-collapse {
+  z-index: 1000;
+}
+
+/* 在手機版時添加背景色 */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: linear-gradient(to bottom,#c50000 70%, #000 100%);
+    padding: 1rem;                            /* 添加內邊距 */
+    border-radius: 0 0 10px 10px;            /* 添加圓角 */
+    margin-top: 10px;                        /* 與上方logo保持距離 */
+  }
+  
+  /* 調整手機版選單文字顏色 */
+  .navbar-nav .nav-link {
+    color: white !important;                 /* 文字顏色改為白色 */
+    padding: 0.5rem 1rem;                   /* 增加點擊區域 */
+  }
+  
+  /* 下拉選單背景色 */
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8);   /* 深色背景 */
+    border: none;
+  }
+  
+  /* 下拉選單文字顏色 */
+  .dropdown-menu .dropdown-item {
+    color: white !important;
+  }
+  
+  /* 下拉選單hover效果 */
+  .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(197, 0, 0, 0.8);
+  }
+}
+
+.navbar-nav li a{
+  font-size: 40px;
+  color: black;
+}
+.dropdown-menu li a{
+  font-size: 35px;
+  color: black;
+}
+
+/* 上方logo */
+.logo_navbar{
+height: 10vh;
+border-radius: 20px;
+}
+
+/* --------------------------------------------------------------------------------- */
+                                                      /* 產品區第二層左方*/
+
+/* 左側選單 */
+.accordion-button{
+  font-size: 1.2em;
+  font-weight: 800;
+}
+table td a{
+  font-size: 1em;
+}
+/* 左側選單互動 */
+.accordion-button:hover{
+  /* 滑鼠在上面時 */
+  background-color: rgba(197, 0, 0,0.7);
+}
+.accordion-button:focus {
+  /* 取得焦點 和click類似但不太一樣 */
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  /* 被點選時 */
+  background-color: rgba(197, 0, 0, 0.7);
+  color: white;
+  box-shadow: none;
+  border-radius: 5px;
+}
+.accordion-body table td:hover{
+  background-color: rgba(197, 0, 0,0.4);
+}
+.accordion-button:not(.collapsed)::after {
+  color: white;
+}
+
+/* 熱門商品互動 */
+.card.text-center.mt-3 img:hover{
+  opacity: 0.5;
+}
+
+/* --------------------------------------------------------------------------------- */
+                                                      /* 產品區第二層右方*/
+/* 商品card */
+.card_width{
+  width: 18%;
+}
+/* 產品區塊 */
+.card.text-center.mt-3 img{
+  padding: 20%;
+  opacity: 1;
+  transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+}
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制最多 2 行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+  /* 標準屬性（目前大部分瀏覽器未支援） */
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+/* --------------------------------------------------------------------------------- */
+                                                      /* 產品區第二層下方*/
+.breadcrumb_css li{
+  font-size: larger;
+  font-weight: 900;
+}
+.breadcrumb_css li a{
+  color: white;
+}
+.breadcrumb_css li a:hover{
+  color: #c50000;
+}
+/* --------------------------------------------------------------------------------- */
+                                                      /* 產品區第二層下方*/
+/* 產品區頁碼 */
+.pagination .page-item .page-link {
+  background-color: black !important;
+  color: white !important;
+  border-color: #c50000 !important;
+}
+.pagination .page-item.active .page-link {
+  background-color: #333 !important;
+  border-color: #c50000 !important;
+}
+.pagination .page-item .page-link:hover {
+  background-color: #555 !important;
+  border-color: #c50000 !important;
+}
+
+/* --------------------------------------------------------------------------------- */
+                                                      /* 產品區第二層產品詳情*/
+.money_color{
+  color: #c50000;
+  font-size: 2em;
+}
+.buycar_color{
+  background: #c50000;
+  font-weight: 900;
+  color: white;
+  border: #c50000 2px solid;
+}
+.buycar_color:hover{
+  background: white;
+  font-weight: 900;
+  color: #c50000;
+  border: #c50000 2px solid;
+}
+.buycar_color:active {
+  background: black !important;
+  font-weight: 900 !important;
+  color: white !important;
+  border: #c50000 2px solid !important;
+}
+.number_color{
+  background: #c50000;
+  font-weight: 700;
+  color: white;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* ------------------------------------響應式設計------------------------------------ */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* 當螢幕寬度小於 576px時 */
+@media (max-width: 576px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #video-background,.video-background iframe{
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+  #video_logo {                /* 影片logo區域 */
+    position: absolute;  /* 使用絕對定位 */
+    top: 2%;
+    left:8%;
+    width: 30%;        /* 可以根據需要調整圖片大小 */
+    height: auto;        /* 保持圖片比例 */
+    border-radius: 20px;
+    z-index: 1;          /* 確保圖片位於影片前方 */
+  }
+
+  .video_helmet {             /* 影片安全帽連結區域 */
+    position: absolute;
+    top: 65%;
+    left: 2%;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+  .video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+    width: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  
+  .video_suit {                 /* 影片防摔衣連結區域 */
+    position: absolute;
+    top: 75%;
+    left: 2%;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+    width: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .video_hand {                  /* 影片防摔手套連結區域 */
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+    background-image: url('./images/jacket.png');
+  }
+
+  .video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+    width: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  h3{
+    font-size: 4rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .side-btn {
+    font-size: 1rem; /* 調整為較小的字體大小 */
+    padding: 5px; /* 可選，縮小按鈕內邊距 */
+  }
+
+  .side-btn:hover {
+    color: #c50000;
+    font-size: 1.2rem;
+  }
+  
+  .side-btn.active {
+    color: #c50000;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .aboutme{
+    /* background: linear-gradient(to bottom, #0f0 50%, #c50000 100%); */
+    background-color: #0000ff;
+    /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+    color: white;
+    padding: 30px 0;
+    height: auto;
+  }
+
+  .about_me_text_a:hover{
+    color: white;
+    font-size: 1.75rem;
+  }
+
+  /* 產品區 */
+  /* 上方navbar */
+  .navbar-nav li a{
+    font-size: 20px;
+    color: black;
+  }
+  /* 左方產品類別 */
+  .accordion-button{
+    font-size: 1em;
+    font-weight: 800;
+  }
+
+}
+
+/* --------------------------------------------------------------------------------- */
+/* 當螢幕寬度大於 576px時 */
+@media (min-width: 576px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #video-background,.video-background iframe{
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+  #video_logo {                /* 影片logo區域 */
+    position: absolute;  /* 使用絕對定位 */
+    top: 2%;
+    left:8%;
+    width: 30%;        /* 可以根據需要調整圖片大小 */
+    height: auto;        /* 保持圖片比例 */
+    border-radius: 20px;
+    z-index: 1;          /* 確保圖片位於影片前方 */
+  }
+
+  .video_helmet {             /* 影片安全帽連結區域 */
+    position: absolute;
+    top: 65%;
+    left: 2%;
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+  .video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+    width: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  
+  .video_suit {                 /* 影片防摔衣連結區域 */
+    position: absolute;
+    top: 75%;
+    left: 2%;
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+    width: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .video_hand {                  /* 影片防摔手套連結區域 */
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+    background-image: url('./images/jacket.png');
+  }
+
+  .video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+    width: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  h3{
+    font-size: 4rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .side-btn {
+    font-size: 1.3rem; /* 調整為較小的字體大小 */
+    padding: 5px; /* 可選，縮小按鈕內邊距 */
+  }
+
+  .side-btn:hover {
+    color: #c50000;
+    font-size: 1.5rem;
+  }
+  
+  .side-btn.active {
+    color: #c50000;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+
+  .aboutme{
+    /* background: linear-gradient(to bottom, #0f0 50%, #c50000 100%); */
+    background-color: #0000ff;
+    /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+    color: white;
+    padding: 30px 0;
+    height: auto;
+  }
+
+  .about_me_text_a:hover{
+    color: #c50000;
+    font-size: 1.75rem;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------------- */
+/* 當螢幕寬度大於 768px時 */
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #video-background,.video-background iframe{
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+  #video_logo {                /* 影片logo區域 */
+    position: absolute;  /* 使用絕對定位 */
+    top: 2%;
+    left:8%;
+    width: 25%;        /* 可以根據需要調整圖片大小 */
+    height: auto;        /* 保持圖片比例 */
+    border-radius: 20px;
+    z-index: 1;          /* 確保圖片位於影片前方 */
+  }
+
+  .video_helmet {             /* 影片安全帽連結區域 */
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+  .video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+    width: 30%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  
+  .video_suit {                 /* 影片防摔衣連結區域 */
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+    width: 30%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .video_hand {                  /* 影片防摔手套連結區域 */
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+    background-image: url('./images/jacket.png');
+  }
+
+  .video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+    width: 30%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  h3{
+    font-size: 4rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .side-btn {
+    font-size: 1.5rem; /* 調整為較小的字體大小 */
+    padding: 5px; /* 可選，縮小按鈕內邊距 */
+  }
+
+  .side-btn:hover {
+    color: #c50000;
+    font-size: 2rem;
+  }
+  
+  .side-btn.active {
+    color: #c50000;
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+
+  .aboutme{
+    /* background: linear-gradient(to bottom, #0f0 50%, #c50000 100%); */
+    background-color: #0000ff;
+    /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+    color: white;
+    padding: 30px 0;
+    height: 80vh;
+  }
+
+  .about_me_text_a:hover{
+    font-size: 1.15rem;
+    color: #c50000;
+  }
+/* 產品區 */
+  /* 上方navbar */
+  .navbar-nav li a{
+    font-size: 2rem;
+    color: black;
+  }
+  /* 左方產品類別 */
+  .accordion-button{
+    font-size: 1em;
+    font-weight: 800;
+  }
+
+}
+/* --------------------------------------------------------------------------------- */
+/* 當螢幕寬度大於 1500px時 */
+@media (min-width: 1500px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #video-background,.video-background iframe{
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+  #video_logo {                /* 影片logo區域 */
+    position: absolute;  /* 使用絕對定位 */
+    top: 2%;
+    left:4%;
+    width: 15%;        /* 可以根據需要調整圖片大小 */
+    height: auto;        /* 保持圖片比例 */
+    border-radius: 20px;
+    z-index: 1;          /* 確保圖片位於影片前方 */
+  }
+
+  .video_helmet {             /* 影片安全帽連結區域 */
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+  .video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  
+  .video_suit {                 /* 影片防摔衣連結區域 */
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .video_hand {                  /* 影片防摔手套連結區域 */
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+    background-image: url('./images/jacket.png');
+  }
+
+  .video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  h3{
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .side-btn {
+    font-size: 1.5rem; /* 調整為較小的字體大小 */
+    padding: 5px; /* 可選，縮小按鈕內邊距 */
+  }
+
+  .side-btn:hover {
+    color: #c50000;
+    font-size: 2rem;
+  }
+  
+  .side-btn.active {
+    color: #c50000;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .aboutme{
+    /* background: linear-gradient(to bottom, #0f0 50%, #c50000 100%); */
+    background-color: #0000ff;
+    /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+    color: white;
+    padding: 30px 0;
+    height: 80vh;
+  }
+
+  .about_me_text_a:hover{
+    font-size: 1.15rem;
+    color: #c50000;
+  }
+
+  /* 產品區 */
+  /* 上方navbar */
+  .navbar-nav li a{
+    font-size: 2rem;
+    color: black;
+  }
+}
+/* --------------------------------------------------------------------------------- */
+/* 當螢幕寬度大於 2560px（2K）時 */
+@media (min-width: 2560px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #video-background,.video-background iframe{
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+  #video_logo {                /* 影片logo區域 */
+    position: absolute;  /* 使用絕對定位 */
+    top: 2%;
+    left:4%;
+    width: 15%;        /* 可以根據需要調整圖片大小 */
+    height: auto;        /* 保持圖片比例 */
+    border-radius: 20px;
+    z-index: 1;          /* 確保圖片位於影片前方 */
+  }
+
+  .video_helmet {             /* 影片安全帽連結區域 */
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+  .video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  
+  .video_suit {                 /* 影片防摔衣連結區域 */
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .video_hand {                  /* 影片防摔手套連結區域 */
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+    background-image: url('./images/jacket.png');
+  }
+
+  .video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  h3{
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .side-btn {
+    font-size: 2.2rem; /* 調整為較小的字體大小 */
+    padding: 5px; /* 可選，縮小按鈕內邊距 */
+  }
+
+  .side-btn:hover {
+    color: #c50000;
+    font-size: 2.75rem;
+  }
+  
+  .side-btn.active {
+    color: #c50000;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+
+  .aboutme{
+    /* background: linear-gradient(to bottom, #0f0 50%, #c50000 100%); */
+    background-color: #0000ff;
+    /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+    color: white;
+    padding: 30px 0;
+    height: 80vh;
+  }
+
+  .about_me_text_a:hover{
+    font-size: 2.5rem;
+    color: #c50000;
+  }
+
+  .last-data{
+    font-size: 4rem;
+  }
+
+    /* 產品區 */
+  /* 上方navbar */
+  .navbar-nav li a{
+    font-size: 3rem;
+    color: black;
+  }
+}
+/* --------------------------------------------------------------------------------- */
+/* 當螢幕寬度大於 3840px（4K）時 */
+@media (min-width: 3840px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #video-background,.video-background iframe{
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* 保證影片在內容後方 */
+  }
+
+  #video_logo {                /* 影片logo區域 */
+    position: absolute;  /* 使用絕對定位 */
+    top: 2%;
+    left:4%;
+    width: 15%;        /* 可以根據需要調整圖片大小 */
+    height: auto;        /* 保持圖片比例 */
+    border-radius: 20px;
+    z-index: 1;          /* 確保圖片位於影片前方 */
+  }
+
+  .video_helmet {             /* 影片安全帽連結區域 */
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+  .video_helmet:hover{             /* 影片安全帽連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  
+  .video_suit {                 /* 影片防摔衣連結區域 */
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .video_suit:hover{                 /* 影片防摔衣連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .video_hand {                  /* 影片防摔手套連結區域 */
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+    transition: all 0.2s ease;
+    background-image: url('./images/jacket.png');
+  }
+
+  .video_hand:hover{                  /* 影片防摔手套連結區域-滑鼠互動 */
+    width: 23%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  h3{
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .side-btn {
+    font-size: 4.5rem; /* 調整為較小的字體大小 */
+    padding: 5px; /* 可選，縮小按鈕內邊距 */
+  }
+
+  .side-btn:hover {
+    color: #c50000;
+    font-size: 5.5rem;
+  }
+  
+  .side-btn.active {
+    color: #c50000;
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
+  .aboutme{
+    /* background: linear-gradient(to bottom, #0f0 50%, #c50000 100%); */
+    background-color: #0000ff;
+    /* 漸層:(使用從上到下,顏色1 到多少結束,顏色2 到多少才開始) */
+    color: white;
+    padding: 30px 0;
+    height: 80vh;
+  }
+
+  .about_me_text_a:hover{
+    font-size: 2.5rem;
+    color: #c50000;
+  }
+
+    /* 產品區 */
+  /* 上方navbar */
+  .navbar-nav li a{
+    font-size: 4rem;
+    color: black;
+  }
+}
