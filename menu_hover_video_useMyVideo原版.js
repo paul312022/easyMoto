@@ -1,4 +1,4 @@
-//                    首頁安全帽 防摔衣 防摔手套滑鼠移入的圖片效果(自己的圖片)
+//                    首頁安全帽 防摔衣 防摔手套滑鼠移入的影片效果(自己的影片)
 //------------------------------------------------------------------------------------------
 
 //            取得DOM元素
@@ -19,20 +19,20 @@ const handLink = document.getElementById('video_hand_link');
 
 //------------------------------------------------------------------------------------------
 
-//            當滑鼠移到不同元素時更改圖片
+//            當滑鼠移到不同元素時更改視頻
 
 helmetLink.addEventListener('mouseover', () => {
-  videoBackground.src = './images/helmet.jpg'; // 切換 my_helmet圖片
+  videoBackground.src = './images/my_helmet.mp4'; // 播放 my_helmet.mp4
   videoBackground.play(); //雖html裡有設定autoplay 但避免程式被更動或是瀏覽器不允許而被破壞 所以留下
 });
 
 suitLink.addEventListener('mouseover', () => {
-  videoBackground.src = './images/jacket.jpg'; // 切換 my_suit圖片
+  videoBackground.src = './images/my_suit.mp4'; // 播放 my_suit.mp4
   videoBackground.play(); //雖html裡有設定autoplay 但避免程式被更動或是瀏覽器不允許而被破壞 所以留下
 });
 
 handLink.addEventListener('mouseover', () => {
-  videoBackground.src = './images/gloves.jpg'; // 切換 my_hand圖片
+  videoBackground.src = './images/my_hand.mp4'; // 播放 my_hand.mp4
   videoBackground.play(); //雖html裡有設定autoplay 但避免程式被更動或是瀏覽器不允許而被破壞 所以留下
 });
 //元素.addEventListener('事件類型',事件處裡函數,布林值);可以接受兩到三個主要參數（布林值可省略）
@@ -48,20 +48,20 @@ handLink.addEventListener('mouseover', () => {
 
 //------------------------------------------------------------------------------------------
 
-//            可以根據需要，當滑鼠移開時停止切換或恢復原來的圖片
+//            可以根據需要，當滑鼠移開時停止播放或恢復原來的視頻
 
 helmetLink.addEventListener('mouseleave', () => {
-  videoBackground.src = './images/index.png'; // 恢復原來的圖片
+  videoBackground.src = './images/index_video.mp4'; // 恢復原來的視頻
   videoBackground.play();
 });
 
 suitLink.addEventListener('mouseleave', () => {
-  videoBackground.src = './images/index.png'; // 恢復原來的圖片
+  videoBackground.src = './images/index_video.mp4'; // 恢復原來的視頻
   videoBackground.play();
 });
 
 handLink.addEventListener('mouseleave', () => {
-  videoBackground.src = './images/index.png'; // 恢復原來的圖片
+  videoBackground.src = './images/index_video.mp4'; // 恢復原來的視頻
   videoBackground.play();
 });
-//同樣使用.addEventListener函數 只是事件變成滑鼠移出 圖片改成原本圖片
+//同樣使用.addEventListener函數 只是事件變成滑鼠移出 影片改成原本影片

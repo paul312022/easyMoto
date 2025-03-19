@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin:*');
 header('Content-Type:application/json;charset=utf-8');
-require_once('Connections/conn_db.php');
+require_once('connections/conn_db.php');
 
 if(isset($_GET['p_id']) && isset($_GET['qty']) && isset($_GET['p_size'])){
     $p_id = $_GET['p_id'];

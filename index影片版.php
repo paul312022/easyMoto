@@ -30,7 +30,7 @@ require_once('./connections/conn_db.php');
   <!-- 頂部影片選單區 -->
   <section id="header">
     <div class="video-background">
-      <img src="./images/index.png" id="video-background"></img>
+      <video src="./images/index_video.mp4" id="video-background" muted autoplay loop></video>
       <img src="./images/logo.png" id="video_logo" title="">
       <a href="./product.php?classid=1&level=1" id="video_helmet_link">
         <img src="./images/helmet.png" class="video_helmet">
